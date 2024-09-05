@@ -1,0 +1,763 @@
+/* Body and link styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #cae9ff;
+    background-color: #caf0f8;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #cae9ff;
+}
+
+a:hover {
+    color: #cae9ff;
+}
+
+/* Header */
+.header {
+    background-color: #d8e2dc;
+    color: #03071e;
+    position:static ; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    width: 100%; /* Full width */
+}
+
+/* Header Top */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #d8e2dc;
+}
+
+/* Links */
+.left-links a,
+.right-links a {
+    color: #03071e;
+    margin-right: 15px;
+}
+
+/* Container (used for various sections) */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between the two items */
+    align-items: center; /* Vertically align items */
+    padding: 10px; /* Add some padding around the container */
+    background-color: #d8e2dc; /* Updated background color */
+    margin-top: 60px; /* Adjust based on header height */
+}
+
+/* Registration Section */
+.registration {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    gap: 1px; /* Space between buttons */
+    order: 1; /* Explicitly set order */
+}
+
+.registration-buttons .button {
+    display: block;
+    width: 200px; /* Set button width */
+    text-align: center; /* Center the button text */
+}
+
+/* Brand Info Section */
+.brand-info {
+    order: 2; /* Explicitly set order */
+    text-align: right; /* Align text to the right for the brand info */
+    max-width: fit-content; /* Reduce width to make it smaller */
+    font-size: 1em; /* Slightly reduce font size */
+    color: black; /* Text color set to black */
+}
+
+/* Brand Info Image */
+.brand-info img {
+    max-width: 200px; /* Reduce image size */
+    margin-bottom: 0px; /* Space between image and text */
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f1faee; /* Button color */
+    color: black; /* Text color set to black */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #bb9457; /* Button hover color */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    position: absolute;
+    margin: 10;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 160 20px; /* Reduced margin for tighter spacing */
+}
+
+.nav-links a {
+    color: #03045e; /* Dark color for readability */
+    font-weight: bold;
+    padding: 8px 12px; /* Reduced padding for smaller clickable area */
+    text-decoration: none;
+    display: flex;
+    border-radius: 5px;
+    font-size: 1.4rem; /* Smaller font size */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #bb9457;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 60px; /* Ensure it doesn't overlap with the fixed header */
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.hero-text h2, .hero-text p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem; /* Adjusted for better visibility */
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+}
+
+.hero-text p {
+    font-size: 1.2rem; /* Adjusted font size */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
+}
+
+/* App Links */
+.app-links a {
+    margin: 0 10px;
+}
+
+.app-links img {
+    width: 120px;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative; /* Changed from absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh; /* Ensure height matches hero section */
+    z-index: 1;
+    background-color: #d8e2dc; /* Optional: Matching background color */
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Slider Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 20px;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Our Services Section */
+.our-services {
+    padding: 20px;
+    background-color: #f2e8cf; /* Background color as per your choice */
+}
+
+.our-services h2 {
+    color: #023e8a; /* Color from your palette */
+    text-align: center; /* Center-align the section title */
+    margin-bottom: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: #d8e2dc; /* Background color from your palette */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+}
+
+.service h3 {
+    color: #03071e; /* Text color from your palette */
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #03071e; /* Text color from your palette */
+    margin-bottom: 15px;
+}
+
+.service img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+}
+/* Citizen Services Section */
+/* Container for Citizen Corner and Photographs */
+.info-sections {
+    display: flex;
+    justify-content: space-between; /* Space out the sections */
+    gap: 20px; /* Space between sections */
+    padding: 20px;
+}
+
+/* Citizen Corner Section */
+.citizen-corner {
+    flex: 1; /* Take available space */
+    background-color: #e3d5ca; /* Background color */
+    padding: 20px;
+}
+
+.citizen-corner h2 {
+    color: #03071e; /* Text color from your palette */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.citizen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.citizen-item {
+    background-color: #f1faee; /* Background color */
+    color: #000000; /* Text color set to black */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light shadow for depth */
+    font-size: 1rem; /* Font size for better readability */
+}
+
+/* Photographs Section */
+.photographs {
+    flex: 1; /* Take available space */
+    background-color: #f1faee; /* Background color */
+    padding: 20px;
+}
+
+.photographs h2 {
+    color: #023e8a; /* Text color from your palette */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Light shadow for depth */
+}
+
+.view-more {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #023e8a; /* Text color from your palette */
+    font-weight: bold;
+}
+/* Videos Section */
+.videos {
+    background-color: #f1faee; /* Background color */
+    flex: 0;
+    padding: 20px;
+}
+
+.videos h2 {
+    color: #023e8a; /* Text color from your palette */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    background-color: #ffffff; /* Background color for video item */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Light shadow for depth */
+}
+
+.video-item video {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.video-title {
+    margin-top: 10px;
+    color: #03071e; /* Text color */
+    font-size: 1rem;
+}
+
+.view-more {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #b30000; /* Text color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+.news-section {
+    grid-column: 2 / span 1;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+}
+.news-item a {
+    color: #b30000;
+}
+
+.news-section h2 {
+    font-size: 1.5em;
+    color: #b30000;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.news-item p {
+    flex-grow: 1;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.view-all-news {
+    color: #b30000;
+    text-decoration: none;
+}
+
+/* Disasters Grid */
+.disasters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid for smaller items */
+    gap: 10px; /* Reduce gap to fit items well */
+    padding: 10px; /* Padding around the grid */
+    background-color: #e3d5ca; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Individual Disaster Item */
+.disaster-item {
+    background-color: #f1faee; /* Background color */
+    padding: 10px; /* Padding */
+    text-align: center; /* Center align */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Disaster Item Image */
+.disaster-item img {
+    width: 50px; /* Adjust size of the icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Disaster Item Heading */
+.disaster-item h3 {
+    color: #03071e; /* Text color */
+    margin: 5px 0; /* Margin */
+    font-size: 1rem; /* Font size */
+}
+
+/* Disaster Item Description */
+.disaster-item p {
+    color: #03071e; /* Text color */
+    font-size: 0.8rem; /* Font size */
+    margin-bottom: 10px; /* Margin */
+}
+
+/* Disaster Button */
+.disaster-btn {
+    background-color: #023e8a; /* Button color */
+    color: #ffffff; /* Text color */
+    padding: 8px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Round button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+/* Button Hover Effect */
+.disaster-btn:hover {
+    background-color: #0077b6; /* Hover color */
+    transform: scale(1.05); /* Enlarge on hover */
+}
+.project-card {
+    background-color: #fff; /* Optional: Adds a background color to make text stand out */
+    padding: 20px; /* Optional: Adds padding inside the card */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    text-align: center; /* Optional: Centers text inside the card */
+}
+
+.project-card h2 {
+    color: black;
+}
+
+.project-card p {
+    color: black;
+}
+
+.project-card .read-more {
+    color: black; /* Changes link color to black */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Optional: Makes the link text bold */
+}
+
+.project-card .read-more:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #d9d9d9;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card .icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.project-card a {
+    color: #03071e;
+}
+
+
+
+.stat-item {
+    text-align: center;
+    color: #03071e;
+}
+.section-container {
+    padding: 20px;
+    background-color: #d8e2dc;
+}
+
+.section-content {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.section-about,
+.section-links,
+.section-contact {
+    width: 100%;
+    color:#03071e ;
+}
+.section-links h2 {
+    color: black;
+}
+
+.section-links ul {
+    list-style: none; /* Removes the default bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+.section-links ul li {
+    margin: 5px 0; /* Adjusts spacing between list items */
+}
+
+.section-links ul li a {
+    color: black; /* Changes link color to black */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.section-links ul li a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+.section-about img {
+    width: 100px;
+    height: auto;
+}
+
+.section-social {
+    margin-top: 10px;
+}
+
+.section-social a {
+    margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #023e8a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Chatbot Container */
+.chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #0077b6, #90e0ef);
+    overflow: hidden;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+    height: 300px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f1faee;
+}
+
+/* Chatbot Messages */
+.chatbot-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chatbot Input */
+.chatbot-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f1faee;
+    border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.chatbot-input input:focus {
+    border-color: #0077b6;
+}
+
+.send-button {
+    background-color: #00b4d8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #0096c7;
+}
+
+/* Chatbot Toggle Button */
+.open-chatbot {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: #001f54;
+    color: #feeafa;
+    border: none;
+    border-radius: 70%;
+    width: 60px;
+    height: 60px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-chatbot:hover {
+    background-color: #0077b6;
+    transform: scale(1.1);
+}
+
+/* Message Styling */
+.chatbot-message {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    background-color: #00b4d8;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.bot {
+    background-color: #f1faee;
+    color: #03045e;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
